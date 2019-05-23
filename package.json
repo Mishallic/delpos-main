@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node .",
+    "start": "node index.js",
     "heroku-postbuild": "cd delpos-client && npm install && npm run build"
   },
   "author": "",
