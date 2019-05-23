@@ -12,17 +12,17 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
-app.use(express.static(path.join(__dirname, 'delpos-client','build')));
+app.use(express.static(path.join(__dirname, 'client','build')));
 
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '/delpos-client/build')));
+    app.use(express.static(path.join(__dirname, '/client/build')));
     app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname+'/delpos-client/build/index.html'));
+        res.sendFile(path.join(__dirname+'/client/build/index.html'));
       });
 }
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, "/delpos-client/build", "index.html"))
+    res.sendFile(path.join(__dirname, "/client/build", "index.html"))
 })
 app.get('/api/mail', (req, res) => {
     res.json(req.body)
@@ -50,7 +50,7 @@ app.post('/api/mail', (req,res) => {
 })
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'delpos-client','build','index.html'));
+    res.sendFile(path.join(__dirname+'client','build','index.html'));
   });
 app.listen( port, () => {
     console.log('We are live on port 4444')
