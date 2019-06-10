@@ -41,15 +41,7 @@ app.post('/api/mail', (req,res) => {
             <p>${data.email}</p>
             <p>${data.message}</p>`
     }
-
-    SGmail.send(mailOptions, (error, res) => {
-        if(error) {
-            res.send('error')
-        }else{
-            res.send('Success')
-        }
-    })
-
+    SGmail.send(mailOptions).then(()=>{res.redirect('/')})
 })
 
 app.get('*', (req, res) => {
