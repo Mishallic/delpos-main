@@ -20,9 +20,6 @@ if(process.env.NODE_ENV === 'production'){
       });
 }
 
-app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'client','build', "index.html"))
-})
 
 app.get('/api/mail', (req, res) => {
     res.json(req.body)
@@ -41,9 +38,6 @@ app.post('/api/mail', (req,res) => {
     SGmail.send(mailOptions).then(()=>{res.redirect('/')})
 })
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,'client','build','index.html'));
-  });
 app.listen( port, () => {
     console.log('live on port 4444')
 })
