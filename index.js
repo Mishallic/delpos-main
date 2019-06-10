@@ -11,11 +11,11 @@ const port = process.env.PORT || 4444;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
+app.use(express.static('client/build'))
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'));
-    app.get('*', (req, res) => {
-        res.sendFile('client/build/index.html')
+    app.get('/*', (req, res) => {
+        res.sendFile(path.resolve(__dirname,'/client','build','index.html'))
         console.log('indexing');
       });
 }
