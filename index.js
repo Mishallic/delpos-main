@@ -12,9 +12,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
-app.use(express.static('client/build'))
-
-
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile('client/build/index.html')
+        console.log('indexing');
+      });
+}
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, 'client','build', "index.html"))
@@ -38,7 +42,7 @@ app.post('/api/mail', (req,res) => {
 })
 
 app.get('*', (req, res) => {
-    res.sendFile('client/build/index.html')
+    res.sendFile(path.join(__dirname,'client','build','index.html'));
   });
 app.listen( port, () => {
     console.log('live on port 4444')
