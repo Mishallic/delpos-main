@@ -56,5 +56,5 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'client','build','index.html'));
   });
 app.listen( port, () => {
-    console.log('We are live on port 4444')
+    console.log('live on port 4444')
 })
