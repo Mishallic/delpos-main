@@ -18,6 +18,9 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname,'client', 'build', 'index.html'))
       });
 }
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname,'client', 'build', 'index.html'))
+  });
 
 app.get('/api/mail', (req, res) => {
     res.json(req.body)
