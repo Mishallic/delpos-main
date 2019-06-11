@@ -5,7 +5,6 @@ const cors = require('cors')
 const path = require('path');
 const app = express();
 
-
 SGmail.setApiKey('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')
 const port = process.env.PORT || 4444;
 
@@ -19,10 +18,10 @@ app.get('*', (req, res) => {
   })
 
   if (process.env.NODE_ENV === "production") {
-    app.use('/', express.static("./client/build"));
-    app.use(express.static(path.join(__dirname, './client/build')));
+    app.use('/', express.static("client/build"));
+    app.use(express.static(path.join(__dirname, 'client/build')));
     app.get('/*', function (req, res) {
-        res.sendFile(path.join(__dirname,'./client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname,'client', 'build', 'index.html'));
     });
   }
 
