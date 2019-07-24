@@ -137,8 +137,6 @@ class SendMsgFormContainer extends Component {
     }
  
     render(){
-        console.log(this.props);
-        
         return(
             <SendMsgForm 
             submitForm={this.submitForm}

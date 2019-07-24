@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import ContainerCardContainer from '../Card/ContainerCard/containerCardContainer';
 import CardContainer from '../Card/Txt_ImgCards/cardContainer';
@@ -23,7 +23,7 @@ const styles = (theme) => ({
   },
 });
 
-class CenteredTabs extends React.Component {
+class CenteredTabs extends Component {
   state = {
     value: 0,
   };

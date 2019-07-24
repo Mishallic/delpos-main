@@ -71,7 +71,7 @@ class ProductPostContainer extends Component {
                             component:'h4'
                         },
                         img:{
-                            static:'/images/apexa3.png'
+                            static:'/images/apexa3-ds.png'
                         }
                     },
 
@@ -95,7 +95,7 @@ class ProductPostContainer extends Component {
                             component:'h4'
                         },
                         img:{
-                            static:'/images/apexa1.png'
+                            static:'/images/apexa1-ds.png'
                         }
                     },
                 ],
@@ -125,7 +125,7 @@ class ProductPostContainer extends Component {
                             component:'h4'
                         },
                         img:{
-                            static:'/images/scanner.jpg'
+                            static:'/images/scanner-ds.jpg'
                         }
                     },
 
@@ -179,7 +179,7 @@ class ProductPostContainer extends Component {
                             variant:'h4'
                         },
                         img:{
-                            static:'/images/printer3.png'
+                            static:'/images/printer3-ds.png'
                         }
                     },
 
@@ -204,7 +204,7 @@ class ProductPostContainer extends Component {
                             variant:'h4'
                         },
                         img:{
-                            static:'/images/printer1.jpg'
+                            static:'/images/printer1-ds.jpg'
                         }
                     },
                 ],
@@ -235,7 +235,7 @@ class ProductPostContainer extends Component {
 
                         },
                         img:{
-                            static:'/images/cashdrawer.jpg'
+                            static:'/images/cashdrawer-ds.jpg'
                         }
                     },
 
@@ -262,7 +262,7 @@ class ProductPostContainer extends Component {
                             compnent:'h4'
                         },
                         img:{
-                            static:'/images/cashdrawer3.jpg'
+                            static:'/images/cashdrawer3-ds.jpg'
                         }
                     },
                 ],
@@ -301,19 +301,19 @@ class ProductPostContainer extends Component {
                   
                           {
                            
-                            imgPath:'/images/apexa1.png'
+                            imgPath:'/images/apexa1-ds.png'
                           },
                           {
                            
-                            imgPath:'/images/apexa2.jpg'
+                            imgPath:'/images/apexa2-ds.jpg'
                           },
                           {
                           
-                            imgPath:'/images/apexa3.png'
+                            imgPath:'/images/apexa3-ds.png'
                           },
                           {
                           
-                            imgPath:'/images/apexa4.png'
+                            imgPath:'/images/apexa4-ds.png'
                           }
                     ]
                 },
@@ -382,19 +382,19 @@ class ProductPostContainer extends Component {
                   
                         {
                          
-                          imgPath:'/images/printer1.jpg'
+                          imgPath:'/images/printer1-ds.jpg'
                         },
                         {
                          
-                          imgPath:'/images/printer2.jpg'
+                          imgPath:'/images/printer2-ds.jpg'
                         },
                         {
                         
-                          imgPath:'/images/printer3.png'
+                          imgPath:'/images/printer3-ds.png'
                         },
                         {
                         
-                            imgPath:'/images/printer4.png'
+                            imgPath:'/images/printer4-ds.png'
                           }
                   ]
                 },
@@ -413,19 +413,19 @@ class ProductPostContainer extends Component {
                   
                         {
                          
-                          imgPath:'/images/cashdrawer.jpg'
+                          imgPath:'/images/cashdrawer-ds.jpg'
                         },
                         {
                          
-                          imgPath:'/images/cashdrawer2.jpg'
+                          imgPath:'/images/cashdrawer2-ds.jpg'
                         },
                         {
                         
-                          imgPath:'/images/cashdrawer3.jpg'
+                          imgPath:'/images/cashdrawer3-ds.jpg'
                         },
                         {
                         
-                          imgPath:'/images/drawer1.jpg'
+                          imgPath:'/images/drawer1-ds.jpg'
                         }
                   ]
                 },
