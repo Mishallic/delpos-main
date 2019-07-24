@@ -62,7 +62,7 @@ class MediaCardContainer extends Component {
        
                 },
                 media:{
-                    url:'images/scanner.jpg',
+                    url:'images/scanner-ds.jpg',
                     alt:'main',
                     styles:{
                         height:'140',
@@ -93,7 +93,7 @@ class MediaCardContainer extends Component {
        
                 },
                 media:{
-                    url:'images/printer4.png',
+                    url:'images/printer4-ds.png',
                     alt:'main',
                     styles:{
                         height:'140',
@@ -123,7 +123,7 @@ class MediaCardContainer extends Component {
        
                 },
                 media:{
-                    url:'images/drawer2.jpg',
+                    url:'images/drawer2-ds.jpg',
                     alt:'main',
                     styles:{
                         height:'140',
@@ -154,7 +154,7 @@ class MediaCardContainer extends Component {
        
                 },
                 media:{
-                    url:'images/apexa4.png',
+                    url:'images/apexa4-ds.png',
                     alt:'main',
                     styles:{
                         height:'140',

@@ -66,7 +66,7 @@ class AboutUsContainer extends Component {
                             component:'h4'
                     },
                     img:{
-                        static:'images/para.jpg'
+                        static:'images/para-ds.jpg'
                     }
                 },
 
@@ -82,7 +82,7 @@ class AboutUsContainer extends Component {
                             component:'h4'
                     },
                     img:{
-                        static:'images/media.jpg'
+                        static:'images/media-ds.jpg'
                     }
                 },
             ],

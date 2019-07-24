@@ -26,7 +26,7 @@ class Home extends Component {
             }
         },
         mediaBridge:{
-            background:'url(images/para.jpg)'
+            background:'url(images/para-ds.jpg)'
         },
         textData1:{
             align:'flex-start',
@@ -73,17 +73,17 @@ class Home extends Component {
         solutions:{
         data:[
             {
-              url:'images/retail.jpg',
+              url:'images/retail-ds.jpg',
               title:'Retail Solutions',
               link:'/contactus'
             },
             {
-              url:'images/supermarket.jpg',
+              url:'images/supermarket-ds.jpg',
               title:'Manage Supermarket Inventory',
               link:'/contactus'
             },
             {
-              url:'images/restaurant.jpg',
+              url:'images/restaurant-ds.jpg',
               title:'Restaurant Solutions',
               link:'/contactus'
             }
@@ -110,14 +110,14 @@ class Home extends Component {
 
                 <div style={{height:'600px'}} className={classes.container}>
                     <TextOverLayContainer data={this.state.textData1} styles={this.props}></TextOverLayContainer>
-                    <HeroSlideContainer data={{type:'image', url:'images/mbridge2.jpg'}} styles={this.props}></HeroSlideContainer>
+                    <HeroSlideContainer data={{type:'image', url:'images/mbridge2-ds.jpg'}} styles={this.props}></HeroSlideContainer>
                 </div>
                 <div className={classes.container}>
                 <ContainerCardContainer styles={this.props} element={mediaCardElement(this.props)}>
                 </ContainerCardContainer>
                 </div>
                 <Divider className='wow fadeInLeft' variant='middle'></Divider>
-                <MediaBridgeContainer styles={this.props} bgi={{backgroundImage:'url(images/para.jpg)'}}></MediaBridgeContainer>
+                <MediaBridgeContainer styles={this.props} bgi={{backgroundImage:'url(images/para-ds.jpg)'}}></MediaBridgeContainer>
                 <div style={{marginBottom:'60px',height:'340px'}} className={classes.container}>
                     <TextOverLayContainer
                     top={0}

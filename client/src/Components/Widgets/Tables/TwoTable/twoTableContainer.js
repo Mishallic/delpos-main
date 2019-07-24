@@ -62,7 +62,7 @@ class TwoTableContainer extends Component {
        
                 },
                 image:{
-                    url:'images/hero.jpg',
+                    url:'images/hero-ds.jpg',
                     alt:'main',
                     styles:{
                         height:'auto',
@@ -92,7 +92,7 @@ class TwoTableContainer extends Component {
                     }
                 },
                 image:{
-                    url:'images/hero2.png',
+                    url:'images/hero2-ds.png',
                     alt:'main',
                     styles:{
                         height:'auto',

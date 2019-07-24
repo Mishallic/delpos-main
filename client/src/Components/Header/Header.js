@@ -86,7 +86,7 @@ const Header = (props) => {
                             <Toolbar>
                             
                             <Link  className={classes.itemButtonLink} to='/'>
-                            <img className={classes.menuLogo} src='images/Delpos1Logo.png' alt='logo'></img>
+                            <img className={classes.menuLogo} src='images/Delpos1Logo-ds.png' alt='logo'></img>
                             </Link>
                             
                             <div className={classes.grow} />

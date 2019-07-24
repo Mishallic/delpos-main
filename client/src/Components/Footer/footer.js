@@ -14,7 +14,7 @@ const Footer = (props) => {
                 <Grid container spacing={40}>
                     <Grid item lg={12} md={12} xs={12}>
                         <div className={classes.logoContainer} >
-                            <img className={classes.logo} src='images/Untitled.png' alt='logo'></img>
+                            <img className={classes.logo} src='images/Untitled-ds.png' alt='logo'></img>
                         </div>
                     </Grid>
                 </Grid>

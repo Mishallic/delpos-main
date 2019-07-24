@@ -19,7 +19,7 @@ const TwoTable =(props) => {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="images/hero.jpg"
+            image="images/hero-ds.jpg"
             title="Contemplative Reptile"
           />
           <CardContent>

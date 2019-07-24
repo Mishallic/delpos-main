@@ -108,22 +108,22 @@ class ProductsContainer extends Component {
         products:{
             data:[
                 {
-                  url:'images/printer4.png',
+                  url:'images/printer4-ds.png',
                   label:'Delpos Thermal Printer',
                   link:'products/printer'
                 },
                 {
-                  url:'images/apexa1.png',
+                  url:'images/apexa1-ds.png',
                   label:'Delpos APEXA',
                   link:'products/monitors'
                 },
                 {
-                  url:'images/delpos3.jpg',
+                  url:'images/delpos3-ds.jpg',
                   label:'Delpos Cash Drawer',
                   link:'products/drawer'
                 },
                 {
-                  url:'images/scanner.jpg',
+                  url:'images/scanner-ds.jpg',
                   label:'Delpos Scanner',
                   link:'products/scanners'
                 },
