@@ -9,36 +9,35 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   root: {
     width: '100%',
-    zIndex:2,
-    position:'fixed',
-    top:0,
+    zIndex: 2,
+    position: 'fixed',
+    top: 0,
     overflow: 'hidden'
   },
-  appBar:{
-    transition: 'transform 1s ease'
+  appBar: {
+    transition: 'background 1s ease'
   },
   grow: {
-    flexGrow:1,
-    width:450
+    flex: 1
   },
-  
-  menuLogo:{
-    width:'165px'
+
+  menuLogo: {
+    width: '165px'
   },
-  
-  itemButton:{
-    fontWeight:'bold',
-    fontSize:'16px',
-    color:'rgba(0, 0, 0, .85)',
-    borderTop:'3px solid transparent',
+
+  itemButton: {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    color: 'rgba(0, 0, 0, .85)',
+    borderTop: '3px solid transparent',
     '&:hover': {
-      color:'black',
-      borderTop:'3px #465E9C solid',
+      color: 'black',
+      borderTop: '3px #465E9C solid',
     }
   },
-  itemButtonLink:{
-    textDecoration:'none',
-    outline:'none',
+  itemButtonLink: {
+    textDecoration: 'none',
+    outline: 'none',
   },
   search: {
     position: 'relative',
@@ -93,31 +92,31 @@ const styles = theme => ({
   },
 });
 
-class HeaderContainer extends Component{
-  
-  state={
+class HeaderContainer extends Component {
+
+  state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
     isTop: true,
     value: 0,
   }
-  
-  
+
+
   handleChange = (event, value) => {
     this.setState({ value });
   };
-  
-  
-  componentDidMount(){
+
+
+  componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 150;
+      const isTop = window.scrollY < 100;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop })
-        
+
       }
     });
   }
-  
+
   handleProfileMenuOpen = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
@@ -134,27 +133,27 @@ class HeaderContainer extends Component{
   handleMobileMenuClose = () => {
     this.setState({ mobileMoreAnchorEl: null });
   };
-  
-  
-  render(){
-    return(
+
+
+  render() {
+    return (
       <div>
-        <Header 
-        anchorEl={this.state.anchorEl}
-        mobileMoreAnchorEl={this.state.mobileMoreAnchorEl}
-        state={this.state}
-        styles={this.props}
-        handleMenuClose={this.handleMenuClose}
-        handleMobileMenuClose={this.handleMobileMenuClose}
-        handleProfileMenuOpen={this.handleProfileMenuOpen}
-        handleMobileMenuOpen={this.handleMobileMenuOpen}
-        handleChange = {this.handleChange}
+        <Header
+          anchorEl={this.state.anchorEl}
+          mobileMoreAnchorEl={this.state.mobileMoreAnchorEl}
+          state={this.state}
+          styles={this.props}
+          handleMenuClose={this.handleMenuClose}
+          handleMobileMenuClose={this.handleMobileMenuClose}
+          handleProfileMenuOpen={this.handleProfileMenuOpen}
+          handleMobileMenuOpen={this.handleMobileMenuOpen}
+          handleChange={this.handleChange}
         >
         </Header>
       </div>
-      )
-    }
+    )
   }
-  
-  
-  export default withStyles(styles)(HeaderContainer)
+}
+
+
+export default withStyles(styles)(HeaderContainer)

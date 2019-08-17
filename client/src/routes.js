@@ -9,15 +9,15 @@ import ContactUsContainer from './Views/ContactUs/contactUsContainer'
 import ProductPostContainer from './Views/Products/Posts/ProductPost/productPostContainer'
 
 const Routes = () => {
-    return(
+    return (
         <Layout>
             <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route exact path='/products' component={ProductsContainer}/>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/products' component={ProductsContainer} />
                 {/* <Route exact path='/aboutus' component={AboutUsContainer}/> */}
-                <Route exact path='/contactus' component={ContactUsContainer}/>
+                <Route exact path='/contactus' component={ContactUsContainer} />
                 {/* <Route exact path='/solutions/:id' component={SolutionsContainer}/> */}
-                <Route exact path='/products/:id' component={ProductPostContainer}/>
+                <Route exact path='/products/:id' component={ProductPostContainer} />
             </Switch>
         </Layout>
     )

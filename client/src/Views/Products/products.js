@@ -3,10 +3,10 @@ import ThreeTableContainer from '../../Components/Widgets/Tables/ThreesTable/thr
 import BridgeContainer from '../../Components/Widgets/Bridge/PaperBridge/bridgeContainer'
 
 const Products = (props) => {
-    return(
+    return (
         <div>
             <BridgeContainer root={props.styles.classes.root1} text={'Main Products'}></BridgeContainer>
-           <ThreeTableContainer layout={4} data={props.data.products} styles={props.styles}></ThreeTableContainer>
+            <ThreeTableContainer layout={4} data={props.data.products} styles={props.styles}></ThreeTableContainer>
         </div>
     )
 }

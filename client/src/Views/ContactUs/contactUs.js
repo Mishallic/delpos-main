@@ -9,13 +9,13 @@ const ContactUs = (props) => {
     const txtOnlyElement = (props) => {
         return (<SendMsgFormContainer styles={props.styles} data={props.data}></SendMsgFormContainer>)
     }
-    const {classes} = props.styles
-    return(
+    const { classes } = props.styles
+    return (
         <div>
-            <div style={{height:'500px', zIndex:99999}} className={classes.container}>
-                <TextOverLayContainer  data={props.data.textOverlayData} styles={props.styles}></TextOverLayContainer>
+            <div style={{ height: '500px', zIndex: 99999 }} className={classes.container}>
+                <TextOverLayContainer data={props.data.textOverlayData} styles={props.styles}></TextOverLayContainer>
             </div>
-            <HeroSlideContainer data={{type:'image', url:'images/telephone-ds.jpg'}} styles={props.styles}></HeroSlideContainer>
+            <HeroSlideContainer data={{ type: 'image', url: 'images/telephone-ds.jpg' }} styles={props.styles}></HeroSlideContainer>
             <ContainerCardContainer styles={props.styles} element={txtOnlyElement(props)}></ContainerCardContainer>
         </div>
     )

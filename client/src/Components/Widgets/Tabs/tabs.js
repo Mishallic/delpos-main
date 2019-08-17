@@ -3,23 +3,23 @@ import SwipeableViews from 'react-swipeable-views';
 import ContainerCardContainer from '../Card/ContainerCard/containerCardContainer';
 import CardContainer from '../Card/Txt_ImgCards/cardContainer';
 import CarouselContainer from '../Steppers/pureReactCarousel/CarsouselContainer';
-import {Grid, Paper, Tabs, Tab, Typography} from '@material-ui/core';
+import { Grid, Paper, Tabs, Tab, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 function TabContainer({ children, styles }) {
   return (
-      <ContainerCardContainer 
-        styles={styles}
-        element={children}>
-      </ContainerCardContainer>
+    <ContainerCardContainer
+      styles={styles}
+      element={children}>
+    </ContainerCardContainer>
   );
 }
 
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    marginTop:'100px',
-    padding:'40px'
+    marginTop: '100px',
+    padding: '40px'
   },
 });
 
@@ -33,16 +33,16 @@ class CenteredTabs extends Component {
   };
 
   render() {
-    
+
     const { classes, theme } = this.props;
     let id = this.props.styles.match.params.id
     const data = this.props.data
-    
+
     return (
       <Paper className={classes.root}>
         <Typography align='center' variant='h2'>
-        {data.products[id].title}
-        </Typography> 
+          {data.products[id].title}
+        </Typography>
         <Tabs
           value={this.state.value}
           onChange={this.handleChange}
@@ -67,7 +67,7 @@ class CenteredTabs extends Component {
           </TabContainer>
 
         </SwipeableViews>
-        <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div>
             <CarouselContainer images={data.products[id].images} styles={this.props.styles}></CarouselContainer>
           </div>

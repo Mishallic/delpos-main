@@ -3,16 +3,16 @@
 import React, { Component } from 'react'
 import ThreeTable from './threeTable'
 
-class ThreeTableContainer extends Component{
-    state={
-        data:{
-            
-          } 
+class ThreeTableContainer extends Component {
+    state = {
+        data: {
+
+        }
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-              <ThreeTable layout={this.props.layout} data={this.props.data} styles={this.props.styles}></ThreeTable>
+                <ThreeTable layout={this.props.layout} data={this.props.data} styles={this.props.styles}></ThreeTable>
             </div>
         )
     }

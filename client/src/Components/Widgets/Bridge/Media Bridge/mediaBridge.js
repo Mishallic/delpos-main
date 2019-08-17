@@ -6,7 +6,7 @@ import React from 'react'
 
 const MediaBridge = (props) => {
     const { classes } = props.styles
-    return(
+    return (
         <div className={classes.rootParallex}>
             <div style={props.bgi} className={classes.parallex}></div>
         </div>

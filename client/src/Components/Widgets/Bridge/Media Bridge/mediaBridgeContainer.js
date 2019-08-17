@@ -1,25 +1,25 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import MediaBridge from './mediaBridge'
 
 
 const styles = () => ({
-    root:{
-        
+    root: {
+
     },
 
 })
 
-class MediaBridgeContainer extends Component{
+class MediaBridgeContainer extends Component {
 
-    state={
-        
+    state = {
+
     }
-    
-    render(){
-        return(
+
+    render() {
+        return (
             <span>
-            <MediaBridge bgi={this.props.bgi}  styles={this.props.styles}></MediaBridge>
+                <MediaBridge bgi={this.props.bgi} styles={this.props.styles}></MediaBridge>
             </span>
         )
     }
@@ -27,4 +27,4 @@ class MediaBridgeContainer extends Component{
 
 
 
-    export default withStyles(styles)(MediaBridgeContainer)
+export default withStyles(styles)(MediaBridgeContainer)

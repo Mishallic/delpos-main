@@ -8,8 +8,8 @@ import React, { Component } from 'react'
 import Card from './card'
 
 class CardContainer extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <Card data={this.props.data} styles={this.props.styles}></Card>
             </div>

@@ -8,14 +8,14 @@ import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 
 
-const TwoTable =(props) => {
-    const {classes} = props.styles
-    const Orientation = () => {
-       
-        let template = null
-        
-        return(
-        <Card className={classes.card}>
+const TwoTable = (props) => {
+  const { classes } = props.styles
+  const Orientation = () => {
+
+    let template = null
+
+    return (
+      <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
             className={classes.media}
@@ -41,16 +41,17 @@ const TwoTable =(props) => {
           </Button>
         </CardActions>
       </Card>
-        
-      ) }
 
-    return(
-        <div className={classes.root}>
-            <div className={classes.container}>
-                {Orientation()}
-            </div>
-        </div>
     )
+  }
+
+  return (
+    <div className={classes.root}>
+      <div className={classes.container}>
+        {Orientation()}
+      </div>
+    </div>
+  )
 }
 
 

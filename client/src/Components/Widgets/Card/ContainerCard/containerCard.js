@@ -6,9 +6,9 @@ import Paper from '@material-ui/core/Paper'
 
 const ContainerCard = (props) => {
 
-    const {classes} = props.styles
+    const { classes } = props.styles
 
-    return(
+    return (
         <div className={classes.ContainerCardPaperRoot}>
             <Paper className={classes.ContainerCardPaper}>
                 {props.element}

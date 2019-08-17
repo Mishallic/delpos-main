@@ -1,21 +1,21 @@
 import React from 'react'
 //MUI
-import {Grid, Typography, TextField, Button} from '@material-ui/core/'
+import { Grid, Typography, TextField, Button } from '@material-ui/core/'
 //
 
 const SendMsgForm = (props) => {
     //gathers data and stores it properly in an array
-    const renderFields = () =>{
-        const formArray=[];
-        for(let keyname in props.formData){
+    const renderFields = () => {
+        const formArray = [];
+        for (let keyname in props.formData) {
             formArray.push({
-                id:keyname,
-                settings:props.formData[keyname]
+                id: keyname,
+                settings: props.formData[keyname]
             })
         }
         //distributes each form field over to the templating function
-        return  formArray.map((item, i)=>{
-            return(
+        return formArray.map((item, i) => {
+            return (
                 <div key={i} className='form-element'>
                     {renderTemplate(item)}
                 </div>
@@ -23,32 +23,32 @@ const SendMsgForm = (props) => {
         })
     }
     //listens for a change in the field
-    const changeHandler = (event, id, blur) =>{
-        const newState= props.formData;
+    const changeHandler = (event, id, blur) => {
+        const newState = props.formData;
         newState[id].config.value = event.target.value
 
-        if (blur){
-        let validData = validate(newState[id])
-        newState[id].valid = validData[0]
-        newState[id].validationMessage = validData[1]
+        if (blur) {
+            let validData = validate(newState[id])
+            newState[id].valid = validData[0]
+            newState[id].validationMessage = validData[1]
         }
         newState[id].touched = blur;
         props.change(newState)
     }
 
     //confirms that the given form iput is valid within a certain configuration
-    const validate = (element) =>{
-       
+    const validate = (element) => {
+
         let error = [true, '']
 
-        if (element.validation.minLen){
+        if (element.validation.minLen) {
             let valid = element.config.value.length >= element.validation.minLen
             let message = 'Must be 5 characters or more..'
-            error = !valid ? [valid, message] : [true,'']
+            error = !valid ? [valid, message] : [true, '']
         }
-        
-        if (element.validation.required){
-            let valid= element.config.value.trim() !== '';
+
+        if (element.validation.required) {
+            let valid = element.config.value.trim() !== '';
             let message = 'This Field is Required'
             error = !valid ? [valid, message] : error
         }
@@ -56,9 +56,9 @@ const SendMsgForm = (props) => {
     }
 
     //displays the validation message
-    const showValidation = (items) =>{
+    const showValidation = (items) => {
         let errorMessage = null;
-        if (items.validation && !items.valid){
+        if (items.validation && !items.valid) {
             errorMessage = (
                 <div className='label_error'>
                     {items.validationMessage}
@@ -68,16 +68,16 @@ const SendMsgForm = (props) => {
         return errorMessage
     }
 
-    const renderTemplate = (item) =>{
+    const renderTemplate = (item) => {
         let values = item.settings
-        return(
+        return (
             <Grid item sm={12} xs={12} md={8}>
                 <TextField
                     className={classes.textField}
                     {...values.config}
                     value={values.config.value}
-                    onBlur={(event)=>changeHandler(event, item.id, true)}
-                    onChange={(event)=>changeHandler(event, item.id, false)}
+                    onBlur={(event) => changeHandler(event, item.id, true)}
+                    onChange={(event) => changeHandler(event, item.id, false)}
                 />
                 {showValidation(values)}
             </Grid>
@@ -86,7 +86,7 @@ const SendMsgForm = (props) => {
 
     //contact information and location
     const displayForm = (props) => {
-        return props.data.info.map( (item,i) => (
+        return props.data.info.map((item, i) => (
             <Grid key={i} item xs>
                 <Grid container>
                     <Grid item xs={2}>
@@ -95,9 +95,9 @@ const SendMsgForm = (props) => {
                     <Grid item xs={10}>
                         <Typography className={classes.locationHeader}>{item.header}</Typography>
                         <Typography component='div' className={classes.locationParagraph}>
-                        <p>{item.address.a}</p>
-                        <p>{item.address.b}</p>
-                        <p>{item.address.c}</p>
+                            <p>{item.address.a}</p>
+                            <p>{item.address.b}</p>
+                            <p>{item.address.c}</p>
                         </Typography>
                     </Grid>
                 </Grid>
@@ -105,19 +105,19 @@ const SendMsgForm = (props) => {
         ))
     }
     const displaySubmitButton = () => (
-        props.data.loading?
-        'sending...'
-        :
-        <Button component='button' type='submit' color='primary' variant='contained'>submit</Button>
+        props.data.loading ?
+            'sending...'
+            :
+            <Button component='button' type='submit' color='primary' variant='contained'>submit</Button>
     )
-    const { classes} = props.styles  
+    const { classes } = props.styles
     return (
         <div className={classes.msgFormRoot}>
-            <form onSubmit={e=>props.submitForm(e)}>
+            <form onSubmit={e => props.submitForm(e)}>
                 <Grid container direction='row' justify='center' spacing={40}>
 
                     <Grid item lg={5} xs={12} className={classes.Inputs}>
-                        <Grid container direction='column'  justify='center' spacing={8}>
+                        <Grid container direction='column' justify='center' spacing={8}>
                             <Grid item sm={12}>
                                 <Typography className={classes.msgFormHeader}>Send Us a Message</Typography>
                                 <Typography className={classes.msgFormParagraph}>Fill the form and we get back to you soon</Typography>
@@ -130,8 +130,8 @@ const SendMsgForm = (props) => {
                     </Grid>
 
                     <Grid item lg={5} xs={12}>
-                        <Grid container direction='column'  justify='center'>
-                        {displayForm(props)}
+                        <Grid container direction='column' justify='center'>
+                            {displayForm(props)}
                         </Grid>
                     </Grid>
                 </Grid>

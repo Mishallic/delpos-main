@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid'
 const Footer = (props) => {
     const { classes } = props.styles
 
-    return(
+    return (
         <div className={classes.root}>
             <div className={classes.container}>
                 <Grid container spacing={40}>
