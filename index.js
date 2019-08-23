@@ -12,14 +12,12 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
-if (process.env.NODE_ENV != 'production') {
-  de.config()
-  SGmail.setApiKey(process.env.SG_API_DEV)
-}
+de.config()
+SGmail.setApiKey(process.env.SG_API_DEV)
 
 if (process.env.NODE_ENV === 'production') {
 
-  SGmail.setApiKey(JSON.stringify(process.env.SG_API))
+  SGmail.setApiKey(JSON.stringify(process.env.SG_API_DEV))
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -45,6 +43,7 @@ app.post('/api/mail', (req,res) => {
             <p>${data.message}</p>`
     }
     SGmail.send(mailOptions).then(()=>{res.redirect('/')})
+    if(err){res.redirect('/')}
 })
 
 app.listen( port, () => {
