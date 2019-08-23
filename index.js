@@ -4,17 +4,17 @@ const SGmail = require ('@sendgrid/mail')
 const cors = require('cors')
 const path = require('path');
 const app = express();
-const de = require('dotenv')
 const port = process.env.PORT || 4444;
 
 //MiddleWares
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
-de.config()
-SGmail.setApiKey(process.env.REACT_APP_SG_API)
 
+SGmail.setApiKey(process.env.REACT_APP_SG_API)
 if (process.env.NODE_ENV === 'production') {
+
+SGmail.setApiKey(process.env.REACT_APP_SG_API || process.env.SG_API)
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
