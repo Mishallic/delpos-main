@@ -19,9 +19,12 @@ const HeroSlide = (props) => {
         }
         if (item.type === 'image') {
             return(
-    
-                <img className={classes.heroImage} alt='hero' src={item.url}>
-                </img>  
+                <div className='imgContainer'>
+                <div className={classes.heroImage} 
+                style={{background:item.url,
+                backgroundPosition: 'center top',backgroundSize:'auto'}}/>
+                <div className='overlay'></div>
+                </div>
             )
         } else {
             alert('else')

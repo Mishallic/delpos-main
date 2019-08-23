@@ -40,10 +40,8 @@ const homeStyle = (theme) => ({
   },
   heroImage: {
     position: 'absolute',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
     top: 0,
-    width: '99%',
+    width: '100%',
     height: '92vh',
     maxHeight: '1000px'
   },
@@ -52,8 +50,12 @@ const homeStyle = (theme) => ({
     width: '99%',
     top: 0
   },
-
-
+  overlay:{
+    background: 'rgba(39,62,84,0.82)',
+    overflow: 'hidden',
+    height: '100%',
+    zIndex: 22,
+  },
   parallex: {
     minHeight: '250px',
     backgroundAttachment: 'fixed',
@@ -63,27 +65,18 @@ const homeStyle = (theme) => ({
   },
 
   TOLheader: {
-    height: 'auto',
-    borderRadius: '10px',
-    fontSize: '42px',
     color: '#DDDEE0',
     textShadow: '2px 2px rgba(0, 0, 0, .4)',
-    fontWeight: 'bold',
     webkitAnimation: 'fadeInDown 1s',
     animation: 'fadeInDown .4s',
 
   },
   TOLparagraph: {
-    fontSize: '18px',
-    fontWeight: 'normal',
     color: 'rgba(255,255,255,1)',
     webkitAnimation: 'fadeInLeft .5s',
     animation: 'fadeInLeft .4s',
   },
   TOLbutton: {
-    height: '35px',
-    fontSize: '15px',
-    fontWeight: 'bolder',
     webkitAnimation: 'fadeIn .5s',
     animation: 'fadeInRight .4s',
   },

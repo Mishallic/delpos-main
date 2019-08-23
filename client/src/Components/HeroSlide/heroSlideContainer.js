@@ -55,5 +55,4 @@ class HeroSlideContainer extends Component {
     }
 }
 
-
 export default withStyles(styles)(HeroSlideContainer)

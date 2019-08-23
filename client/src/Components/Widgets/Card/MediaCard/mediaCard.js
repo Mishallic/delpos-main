@@ -28,9 +28,10 @@ const MediaCard = (props) => {
 
   //recieves data and presents it as jsx
   const template = (item) => {
-
+    
     let text = item.text
     let media = item.media
+
     return (
       <Card className={classes.card}>
         <NavLink style={{ textDecoration: 'none' }} to={text.button.link}>
@@ -41,10 +42,10 @@ const MediaCard = (props) => {
               title="Product"
             />
             <CardContent>
-              <Typography gutterBottom {...text.styles.header}>
+              <Typography variant='h6' gutterBottom>
                 {text.header}
               </Typography>
-              <Typography component={text.styles.paragraph.component}>
+              <Typography className='caption_ts'>
                 {text.paragraph}
               </Typography>
             </CardContent>

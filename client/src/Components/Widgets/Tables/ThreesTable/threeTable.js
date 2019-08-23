@@ -42,7 +42,7 @@ const ThreeTable = (props) => {
                         </span>
                     </ButtonBase>
                 </Link>
-                <Typography className={classes.ThreesTableLabel} align='center'>{item.label}</Typography>
+                <Typography className={classes.ThreesTableLabel} variant='h6' align='center'>{item.label}</Typography>
             </div>
         </Grid>
     )

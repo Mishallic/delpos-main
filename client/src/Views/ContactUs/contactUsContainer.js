@@ -31,7 +31,8 @@ const styles = (theme) => ({
         backgroundPosition: 'center',
         top: 0,
         width: '100%',
-        height: '90vh'
+        height: '90vh',
+        
 
     },
     videoPlayer: {
@@ -41,27 +42,18 @@ const styles = (theme) => ({
 
     //textOnlyCard Container
     TOLheader: {
-        height: 'auto',
-        borderRadius: '10px',
-        fontSize: '42px',
         color: '#DDDEE0',
         textShadow: '2px 2px rgba(0, 0, 0, .4)',
-        fontWeight: 'bold',
         webkitAnimation: 'fadeInDown 1s',
         animation: 'fadeInDown .4s',
 
     },
     TOLparagraph: {
-        fontSize: '18px',
-        fontWeight: 'normal',
         color: 'rgba(255,255,255,1)',
         webkitAnimation: 'fadeInLeft .5s',
         animation: 'fadeInLeft .4s',
     },
     TOLbutton: {
-        height: '35px',
-        fontSize: '15px',
-        fontWeight: 'bolder',
         webkitAnimation: 'fadeIn .5s',
         animation: 'fadeInRight .4s',
     },

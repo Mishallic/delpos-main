@@ -15,7 +15,7 @@ const ContactUs = (props) => {
             <div style={{ height: '500px', zIndex: 99999 }} className={classes.container}>
                 <TextOverLayContainer data={props.data.textOverlayData} styles={props.styles}></TextOverLayContainer>
             </div>
-            <HeroSlideContainer data={{ type: 'image', url: 'images/telephone-ds.jpg' }} styles={props.styles}></HeroSlideContainer>
+            <HeroSlideContainer data={{ type: 'image', url: 'url(images/telephone-ds.jpg)' }} styles={props.styles}></HeroSlideContainer>
             <ContainerCardContainer styles={props.styles} element={txtOnlyElement(props)}></ContainerCardContainer>
         </div>
     )

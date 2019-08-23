@@ -114,7 +114,6 @@ class MediaCardContainer extends Component {
                         }
                     },
                     button: {
-                        size: 'small',
                         variant: 'contained',
                         cta: 'Know more',
                         link: '/products',
@@ -134,7 +133,7 @@ class MediaCardContainer extends Component {
             {
                 text: {
                     header: 'Delpos POS Terminals',
-                    paragraph: 'APEXA®G features modern and contemporary styling, powerful performance,superior touch display, multiple I/O interfaces and flexible installation.',
+                    paragraph: 'APEXA®G modern and contemporary styling.',
                     styles: {
                         header: {
                             component: 'h2',
@@ -170,7 +169,7 @@ class MediaCardContainer extends Component {
         const { classes } = this.props
         return (
             <div className={classes.rootContainer}>
-                <CardMedia data={this.state.data} styles={this.props} ></CardMedia>
+                <CardMedia data={this.state.data} styles={this.props} />
             </div>
         )
     }

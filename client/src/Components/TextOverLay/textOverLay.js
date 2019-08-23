@@ -34,7 +34,6 @@ const TextOverLay = (props) => {
                 <span>
                     <NavLink to={data.button.pri.link}>
                         <Button
-
                             color='primary'
                             variant='contained'
                             size='large'
@@ -69,14 +68,14 @@ const TextOverLay = (props) => {
                     container
                 >
 
-                    <Grid item md={6} sm={12} xs={12}>
-                        <Typography align={data.header.align} style={props.style} className={classes.TOLheader}>{data.header.text}</Typography>
+                    <Grid item md={8} sm={12} xs={12}>
+                        <Typography align={data.header.align} style={props.style} variant='h2' className={classes.TOLheader}>{data.header.text}</Typography>
                     </Grid>
 
                     <Grid item md={6} sm={12} xs={12}>
                         <Grid container justify={data.paragraph.justify} direction='row'>
                             <Grid item xl={8} md={8} lg={8} xs={8}>
-                                <Typography style={props.style} className={classes.TOLparagraph} align={data.paragraph.align} >
+                                <Typography style={props.style} className={classes.TOLparagraph} variant='h6' align={data.paragraph.align} >
                                     {data.paragraph.text}
                                 </Typography>
                             </Grid>

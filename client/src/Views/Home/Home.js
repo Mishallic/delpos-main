@@ -100,10 +100,7 @@ class Home extends Component {
         const mediaCardElement = (props) => {
             return (
                 <span>
-                    <Typography style={{
-                        fontSize: '26px',
-                        fontWeight: 'bold'
-                    }} align='center'>Products</Typography>
+                    <Typography variant='h4' align='center'>Products</Typography>
                     <MediaCardContainer styles={props.styles} data={props.data}></MediaCardContainer>
                 </span>
             )
@@ -113,7 +110,7 @@ class Home extends Component {
 
                 <div style={{ height: '600px' }} className={classes.container}>
                     <TextOverLayContainer data={this.state.textData1} styles={this.props}></TextOverLayContainer>
-                    <HeroSlideContainer data={{ type: 'image', url: 'images/mbridge2-ds.jpg' }} styles={this.props}></HeroSlideContainer>
+                    <HeroSlideContainer data={{ type: 'image', url: 'url(images/mbridge2-ds.jpg)' }} styles={this.props}></HeroSlideContainer>
                 </div>
                 <div className={classes.container}>
                     <ContainerCardContainer styles={this.props} element={mediaCardElement(this.props)}>

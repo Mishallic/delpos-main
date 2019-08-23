@@ -28,6 +28,7 @@ const styles = (theme) => ({
   },
 
   ThreesTableimage: {
+    zIndex:1,
     position: 'relative',
     height: 225,
     width: '100%',
@@ -54,6 +55,7 @@ const styles = (theme) => ({
     color: theme.palette.common.white,
   },
   ThreesTableimageSrc: {
+    zIndex:1,
     borderRadius: '5px',
     position: 'absolute',
     left: 0,
@@ -66,9 +68,7 @@ const styles = (theme) => ({
     transition: 'transform .5s ease',
   },
   ThreesTableLabel: {
-    padding: 18,
-    fontSize: 16,
-    fontWeight: 'bolder'
+    zIndex: 22
   },
 
   //
