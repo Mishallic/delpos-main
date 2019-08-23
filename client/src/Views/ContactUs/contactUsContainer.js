@@ -16,7 +16,7 @@ const styles = (theme) => ({
     HeroRoot: {
         position: 'absolute',
         height: '100%',
-        width: '98%',
+        width: '100%',
         top: 0
     },
     heroContainer: {
