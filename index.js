@@ -12,9 +12,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
-
-de.config()
-SGmail.setApiKey(process.env.SG_API_DEV)
+if (process.env.NODE_ENV != 'production') {
+  de.config()
+  SGmail.setApiKey(process.env.SG_API_DEV)
+}
 
 if (process.env.NODE_ENV === 'production') {
 
