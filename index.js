@@ -16,7 +16,7 @@ app.use(cors())
 
 if (process.env.NODE_ENV === 'production') {
 
-SGmail.setApiKey(JSON.stringify(process.env.SG_AP))
+SGmail.setApiKey(JSON.stringify(process.env.SG_API))
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
