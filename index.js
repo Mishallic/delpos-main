@@ -7,16 +7,18 @@ const app = express();
 const de = require('dotenv')
 const port = process.env.PORT || 4444;
 
-de.config()
-SGmail.setApiKey(process.env.SG_API)
 //MiddleWares
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
+
+de.config()
+SGmail.setApiKey(process.env.SG_API_DEV)
+
 if (process.env.NODE_ENV === 'production') {
 
-SGmail.setApiKey(JSON.stringify(process.env.SG_API))
+  SGmail.setApiKey(process.env.SG_API)
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
