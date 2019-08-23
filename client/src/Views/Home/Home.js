@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 //components
 import HeroSlideContainer from '../../Components/HeroSlide/heroSlideContainer'
 import TextOverLayContainer from '../../Components/TextOverLay/textOverLayContainer'
@@ -95,8 +94,8 @@ class Home extends Component {
     }
 
     render() {
+        console.log(process.env.REACT_APP_SG_API);
         const { classes } = this.props
-
         const mediaCardElement = (props) => {
             return (
                 <span>
