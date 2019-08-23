@@ -39,8 +39,8 @@ app.post('/api/mail', (req,res) => {
             <p>${data.email}</p>
             <p>${data.message}</p>`
     }
-    SGmail.send(mailOptions).then(()=>{res.redirect('/')})
-    if(err){res.redirect('/')}
+    SGmail.send(mailOptions).then((err,res)=>{res.redirect('/') 
+    if(err){res.redirect('/')}})
 })
 
 app.listen( port, () => {
