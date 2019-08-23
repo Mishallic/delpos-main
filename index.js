@@ -11,13 +11,10 @@ const port = process.env.PORT || 4444;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
-
 de.config()
-SGmail.setApiKey(process.env.SG_API_DEV)
+SGmail.setApiKey(process.env.REACT_APP_SG_API)
 
 if (process.env.NODE_ENV === 'production') {
-
-  SGmail.setApiKey(JSON.stringify(process.env.SG_API_DEV))
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -48,4 +45,6 @@ app.post('/api/mail', (req,res) => {
 
 app.listen( port, () => {
     console.log('live on port 4444')
+    console.log(process.env.REACT_APP_SG_API);
+    
 })
