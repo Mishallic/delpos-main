@@ -94,7 +94,6 @@ class Home extends Component {
     }
 
     render() {
-        console.log(process.env.REACT_APP_SG_API);
         const { classes } = this.props
         const mediaCardElement = (props) => {
             return (
