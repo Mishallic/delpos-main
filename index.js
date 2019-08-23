@@ -19,7 +19,7 @@ if (process.env.NODE_ENV != 'production') {
 
 if (process.env.NODE_ENV === 'production') {
 
-  SGmail.setApiKey(process.env.SG_API)
+  SGmail.setApiKey(JSON.stringify(process.env.SG_API))
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
