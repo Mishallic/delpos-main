@@ -107,7 +107,6 @@ const homeStyle = (theme) => ({
     padding: '40px',
     paddingTop: '50px',
     paddingBottom: '50px',
-    // border:'1px dotted orange',
     margin: 'auto'
   },
 

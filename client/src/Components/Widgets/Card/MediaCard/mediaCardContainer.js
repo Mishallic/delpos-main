@@ -19,7 +19,7 @@ const styles = (theme) => ({
         height: 220,
         backgroundSize: 'cover',
         [theme.breakpoints.down('md')]: {
-            width: '80vh'
+          
         },
     },
     root: {
