@@ -123,10 +123,9 @@ class SendMsgFormContainer extends Component {
 
         if (formIsValid) {
             axios.post('/api/mail', dataSubmission)
-                .then((response, error) => { window.location = '/' })
-            this.setState({ loading: true })
-                .catch(err => {
-                    console.log(err)
+                .then((response, error) => { window.location = '/'; this.setState({ loading: true }) })
+                .catch((err) => {
+                    // console.log(err)
                 })
         }
     }
