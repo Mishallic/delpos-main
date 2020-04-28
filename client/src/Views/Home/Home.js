@@ -9,7 +9,8 @@ import MediaBridgeContainer from '../../Components/Widgets/Bridge/Media Bridge/m
 import homeStyle from '../../assets/jss/homeStyle'
 import ContainerCardContainer from '../../Components/Widgets/Card/ContainerCard/containerCardContainer'
 //MUI
-import { Typography, Divider } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles'
 //
 

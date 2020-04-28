@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, ButtonBase, Typography, Paper } from '@material-ui/core'
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+import ButtonBase from '@material-ui/core/ButtonBase'
+import Grid from '@material-ui/core/Grid'
 
 const ThreeTable = (props) => {
 

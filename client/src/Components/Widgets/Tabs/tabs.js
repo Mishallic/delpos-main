@@ -3,7 +3,12 @@ import SwipeableViews from 'react-swipeable-views';
 import ContainerCardContainer from '../Card/ContainerCard/containerCardContainer';
 import CardContainer from '../Card/Txt_ImgCards/cardContainer';
 import CarouselContainer from '../Steppers/pureReactCarousel/CarsouselContainer';
-import { Grid, Paper, Tabs, Tab, Typography } from '@material-ui/core';
+
+import Typography from '@material-ui/core/Typography';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 function TabContainer({ children, styles }) {

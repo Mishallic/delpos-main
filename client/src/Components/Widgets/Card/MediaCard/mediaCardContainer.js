@@ -21,7 +21,7 @@ const styles = (theme) => ({
         [theme.breakpoints.down('md')]: {
           
         },
-    },
+    },  
     root: {
         marginBottom: '30px'
     },
