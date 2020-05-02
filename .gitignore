@@ -1,2 +1,4 @@
 client/node_modules/
-.gitignoresendgrid.env
+node_modules/
+.gitignore
+sendgrid.env
