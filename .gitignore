@@ -1,4 +1,0 @@
-client/node_modules/
-node_modules/
-.gitignore
-sendgrid.env
